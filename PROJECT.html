@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — My Blog</title>
+  <meta name="description" content="About the author and mission of My Blog." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa6b2;--accent:#06b6d4}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; margin:0; background:linear-gradient(180deg,#081023 0%, #071428 100%); color:#e6eef6; -webkit-font-smoothing:antialiased}
+    .container{max-width:1000px;margin:48px auto;padding:24px}
+    header{display:flex;align-items:center;gap:16px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#2563eb);display:flex;align-items:center;justify-content:center;font-weight:800;color:#032;box-shadow:0 6px 18px rgba(2,6,23,0.6)}
+    h1{margin:0;font-size:28px}
+    p.lead{margin:8px 0 24px;color:var(--muted)}
+
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:28px}
+
+    .card{background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);padding:22px;border-radius:14px}
+
+    .about-me{display:flex;gap:18px;align-items:flex-start}
+    .avatar{width:120px;height:120px;border-radius:12px;flex-shrink:0;background:linear-gradient(135deg,#e6eef622, #c7f9ff);overflow:hidden;display:flex;align-items:center;justify-content:center;color:#012;font-weight:700}
+    .bio h2{margin:0 0 8px}
+    .bio p{margin:0;color:var(--muted);line-height:1.6}
+
+    .stats{display:flex;gap:12px;margin-top:16px}
+    .stat{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:10px 12px;border-radius:10px;text-align:center}
+    .stat strong{display:block;font-size:18px}
+    .mission{margin-top:18px;color:var(--muted)}
+
+    .sidebar .subscribe{display:flex;flex-direction:column;gap:12px}
+    .subscribe input[type="email"]{padding:12px;border-radius:10px;border:1px solid rgba(255,255,255,0.05);background:transparent;color:inherit}
+    .subscribe button{padding:12px;border-radius:10px;background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;color:#042;font-weight:700;cursor:pointer}
+
+    .tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .tag{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);color:var(--muted);font-size:13px}
+
+    footer{margin-top:32px;padding:18px 24px;border-radius:12px;background:rgba(255,255,255,0.01);color:var(--muted);display:flex;justify-content:space-between;align-items:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .grid{grid-template-columns:1fr;}
+      .sidebar{order:2}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">MB</div>
+      <div>
+        <h1>About My Blog</h1>
+        <p class="lead">Stories, tutorials, and behind-the-scenes about building things that matter.</p>
+      </div>
+    </header>
+
+    <main class="grid" role="main">
+      <section>
+        <article class="card">
+          <div class="about-me">
+            <div class="avatar">AK</div>
+            <div class="bio">
+              <h2>Hi — I'm Ahmad</h2>
+              <p>I write about web development, productivity, and digital creativity. I started this blog to share practical tutorials and honest essays from my experience building projects, learning new tools, and solving problems.</p>
+
+              <p class="mission"><strong>Mission</strong><br/>To help curious developers ship better projects faster — one clear guide at a time.</p>
+
+              <div class="stats" aria-hidden="true">
+                <div class="stat"><strong>5+</strong><span class="muted">Years writing</span></div>
+                <div class="stat"><strong>120</strong><span class="muted">Articles</span></div>
+                <div class="stat"><strong>30k</strong><span class="muted">Monthly readers</span></div>
+              </div>
+            </div>
+          </div>
+
+          <hr style="border:none;height:1px;background:linear-gradient(90deg,rgba(255,255,255,0.02),transparent);margin:18px 0;border-radius:2px">
+
+          <h3>What you'll find here</h3>
+          <p class="lead">Practical tutorials, project breakdowns, and occasional long-form essays about how I work and what I learn.</p>
+
+          <h4>Recent topics</h4>
+          <ul>
+            <li>JavaScript & modern tooling</li>
+            <li>Site performance and deployment</li>
+            <li>Productivity for creators</li>
+            <li>Design systems & UI snippets</li>
+          </ul>
+
+          <h4 style="margin-top:18px">How I work with readers</h4>
+          <p class="muted">I reply to emails and try to answer comments. If you want help with something specific, include a short description and links — I’ll do my best to respond.</p>
+
+          <div style="margin-top:18px;display:flex;gap:10px">
+            <a href="#contact" style="text-decoration:none;padding:10px 14px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.03);">Contact me</a>
+            <a href="/blog" style="text-decoration:none;padding:10px 14px;border-radius:10px;">Read posts</a>
+          </div>
+        </article>
+      </section>
+
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Subscribe</h3>
+          <p class="muted">Get new posts by email — no spam, unsubscribe anytime.</p>
+          <form class="subscribe" onsubmit="event.preventDefault();alert('Subscribed (demo)');">
+            <input type="email" placeholder="Your email" required />
+            <button type="submit">Subscribe</button>
+          </form>
+
+          <div style="margin-top:14px">
+            <h4>Popular tags</h4>
+            <div class="tags">
+              <span class="tag">JavaScript</span>
+              <span class="tag">Web</span>
+              <span class="tag">Tutorials</span>
+              <span class="tag">Productivity</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" style="margin-top:18px">
+          <h4>Quick links</h4>
+          <ul style="margin:8px 0 0;padding-left:18px;color:var(--muted)">
+            <li><a href="/" style="color:inherit;text-decoration:none">Home</a></li>
+            <li><a href="/blog" style="color:inherit;text-decoration:none">Blog</a></li>
+            <li><a href="/projects" style="color:inherit;text-decoration:none">Projects</a></li>
+            <li><a href="#contact" style="color:inherit;text-decoration:none">Contact</a></li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <div>© <strong>My Blog</strong> — Built with ❤️</div>
+      <div style="font-size:13px;color:var(--muted)">Made by Ahmad • <a href="#" style="color:inherit;text-decoration:none">Privacy</a></div>
+    </footer>
+  </div>
+</body>
+</html>

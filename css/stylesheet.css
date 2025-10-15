@@ -1,0 +1,66 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/**
+h2{
+    color: orange;
+}
+p{
+    background-color: black;
+    color: white;
+
+}
+button{
+    color: white;
+    background-color: blue;
+}**/
+#myid{
+    color:green;
+}
+
+input[type="text"]{
+    color: red;
+}
+input[type="password"]{
+    color: yellow;
+}
+div>input{
+    background-color: aquamarine;
+}
+.greatdiv p{
+    color: blue;
+}
+h1::first-letter{
+    color: blue;
+}
+p::first-line{
+    color: lawngreen;
+}
+p::selection{
+    color: yellow;
+}
+button:hover{
+    color: rgb(0, 0, 0);
+    background-color: darkgoldenrod;
+}
+button:active{
+    background-color: brown;
+}
+input[type="radio"]:checked + label{
+    color: brown;
+    font-weight: bold;
+}
+/*First letter*/
+.first::first-line{
+    color: green;
+}
+.first::first-letter{
+    color: blue;
+}
+.first::selection{
+    color: rgb(111, 168, 201);
+}
+h2{
+    color: brown;
+}
